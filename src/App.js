@@ -28,7 +28,8 @@ function App() {
       <ShoppingList name = "alok5"></ShoppingList> */}
 
 {/* Second example */}
-       {/* <Welcome name= "Orion"></Welcome> */}
+       {/* <Welcome name= "Orion"></Welcome>
+       <Welcome name= "megala"></Welcome> */}
 
 {/* Third example */}
       {/* <Clock date={new Date()} /> */}
@@ -37,9 +38,9 @@ function App() {
       {/* <Clock></Clock> */}
 
 {/* Fifth exmaple */}
-      <Clock timeOut = "1000"/>
+      {/* <Clock timeOut = "1000"/>
       <Clock timeOut = "2000"/>
-      <Clock timeOut = "3000"/>
+      <Clock timeOut = "3000"/> */}
 
     </div>
   );
@@ -48,37 +49,37 @@ function App() {
 
 // Fifth Example
 
-  class Clock extends React.Component {
-    constructor(props) {
-      super(props); //then only you can access this function! read more here. https://overreacted.io/why-do-we-write-super-props/
-      this.state = {date: new Date()};
-    }
+  // class Clock extends React.Component {
+  //   constructor(props) {
+  //     super(props); //then only you can access this function! read more here. https://overreacted.io/why-do-we-write-super-props/
+  //     this.state = {date: new Date()};
+  //   }
 
-    componentDidMount() {
-      this.timerID = setInterval(
-        () => this.tick(),
-        this.props.timeOut
-      );
-    }
+  //   componentDidMount() {
+  //     this.timerID = setInterval(
+  //       () => this.tick(),
+  //       this.props.timeOut
+  //     );
+  //   }
 
-    componentWillUnmount() {
-      clearInterval(this.timerID);
-    }
+  //   componentWillUnmount() {
+  //     clearInterval(this.timerID);
+  //   }
 
-    tick() {
-      this.setState({
-        date: new Date()
-      });
-    }
+  //   tick() {
+  //     this.setState({
+  //       date: new Date()
+  //     });
+  //   }
 
-    render() {
-      return (
-        <div>
-          <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-        </div>
-      );
-    }
-  }
+  //   render() {
+  //     return (
+  //       <div>
+  //         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+  //       </div>
+  //     );
+  //   }
+  // }
 
 // Forth example
 
@@ -120,7 +121,7 @@ function App() {
   //   return (
   //     <div>
   //       <h1>Hello, world!</h1>
-  //       <h2>It is {props.date.toLocaleTimeString()}.</h2>
+        // <h2>It is {props.date.toLocaleTimeString()}.</h2>
   //     </div>
   //   );
   // }
